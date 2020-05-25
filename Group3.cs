@@ -58,7 +58,7 @@ namespace tax
             {
                 outcome2558 = (property2558 * 20) / 100;
                 textBox1.Text = outcome2558.ToString();
-                outcome4 = (outcome2558 * 4) / 20;
+                outcome4 = outcome2558 / 5;
                 textBox2.Text = outcome4.ToString();
                 outcomefinal2558 = (taxhouse + outcome4);
                 textBox5.Text = outcomefinal2558.ToString();
@@ -78,17 +78,17 @@ namespace tax
             int outcomefinal2562;
             int outcomesum;
             int a = 0;
-            if (property <= 5000000)
+            if (property > 5000000)
             {
                 a = 200000;
             }
-            else if (property > 5000000)
+            else if (property <= 5000000)
             {
-                a = 0;
+                a = 200000;
             }
             else if (property < 200000)
             {
-                a = 0;
+                a = property;
             }
             outcome2562 = a;
             textBox4.Text = outcome2562.ToString();
